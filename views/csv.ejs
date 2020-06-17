@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form method="POST" name="csvForm" action="/csv/upload" enctype="multipart/form-data">
+    <input name="csv_file" type="file" />
+    <input type="submit">
+    </form>
+    <!-- <a href="<%= file_url %>" id="" class="hide">Download</a> -->
+    <syle>
+      .hide {
+        display:node;
+      }
+      .show {
+        display:block;
+      }
+    </syle>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1></h1>
+    <% for (var i = 0; i < data.length; i++) { %>
+    <p><%= data[i] %></p>
+    <% } %>
+    <% if(data.length == 0) { %>
+      No Data Found , <%= message %>   
+    <% } %>
+  </body>
+</html>

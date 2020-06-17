@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  </head>
+  <body>
+    
+    
+    <div class="container">
+      
+      <br>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-md-6 order-md-1">
+          <h3>Only Remove Error Corrections</h3>
+          <h5>Step 1: upload a Error Corrections JSON.file</h5>
+          <h5>Step 2: Submit a Button</h5>
+          <h5>Step 3: Removal Error Corrections Id only get </h5>
+          <form method="POST" name="csvForm" action="/errorcorrections/upload" enctype="multipart/form-data">
+            <input name="json_file" required accept="application/JSON" type="file" />
+            <input type="submit">
+          </form>
+        </div>
+        <div class="col-md-6 order-md-1">
+          
+          <form class="needs-validation" method="POST" name="csvForm" action="/errorcorrections/pick">
+            <!-- <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="FileUpload">File</label>
+                <input name="json_file" accept="application/JSON" type="file" class="form-control" >
+              </div>              
+            </div> -->
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <input name="token" type="text" placeholder="Token" class="form-control">
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <select class="custom-select d-block w-100" name="customer" id="customer" required>
+                  <option value="">Choose Customer...</option>
+                  <option value="sjs">sjs</option>
+                  <option value="elsevier">elsevier</option>
+                  <option value="rsc">rsc</option>
+                  <option value="degruyter">degruyter</option>
+                  <option value="lsa">lsa</option>
+                  <option value="mre">mre</option>
+                </select>
+              </div>              
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <select class="custom-select d-block w-100" name="type" id="type" required>
+                  <option value="">Choose Type...</option>
+                  <option value="error-instruction">Error-Instruction</option>
+                  <option value="delete">Delete</option>
+                  <option value="nuke-delete">Nuke-Delete</option>
+                  <option value="clear-delete">Clear-Delete</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row" >
+              <div class="col-md-3 mb-3">
+                <input type="submit" class="form-control btn btn-submit btn-success">
+              </div>
+            
+            </div>
+            
+    
+            </form>
+        </div>
+      </div>
+    
+      <!-- <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">© 2017-2020 Company Name</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer> -->
+    </div>
+    
+  </body>
+</html>
